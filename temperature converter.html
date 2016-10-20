@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<style type="text/css" >
+
+    body {
+        background-image: url("http://rs717.pbsrc.com/albums/ww173/prestonjjrtr/Winter/thermometer-7568.gif~c200");
+        background-color: rgba(255, 255, 255, 0.97);
+    }
+
+    form {
+        background: rgb(181, 233, 255);
+        padding:1em;
+        border:5px solid #000000;
+        margin:1em;
+        width:42em;
+alignment: center;
+    }
+
+ html{
+     padding: 15em;
+
+ }
+
+</style>
+<form>
+<font color= "black">
+    <div align="center">
+
+
+    <h1>Temperature converter</h1>
+
+<p>Insert a number into one of the input fields below:</p>
+
+<p><input id="c" onkeyup="convert('C')"> degrees Celsius</p>
+equals
+<p><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</p>
+
+<p>Note that the <b>Math.round()</b> method is used, so that the result will be returned as an integer.</p>
+
+        </div>
+</font>
+</form>
+<script>
+    function convert(degree) {
+        var x;
+        if (degree == "C") {
+            x = document.getElementById("c").value * 9 / 5 + 32;
+            document.getElementById("f").value = Math.round(x);
+        } else {
+            x = (document.getElementById("f").value -32) * 5 / 9;
+            document.getElementById("c").value = Math.round(x);
+        }
+    }
+</script>
+
+</body>
+</html>
